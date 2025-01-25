@@ -5,10 +5,6 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
 import Cookies from 'js-cookie';
-import dotenv from 'dotenv';
-
-
-const GOOGLE_CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID;
 
 
 
@@ -66,7 +62,8 @@ const LoginPage = () => {
   return (
     <div>
     <div className='outer-container'>
-        <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
+
+        <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
             <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
         </GoogleOAuthProvider>
     </div>

@@ -17,17 +17,13 @@ import Cookies from 'js-cookie';
 import P from './pages/PrivacyPolicy/P';
 import ReactGA from 'react-ga4';
 import ImportExport from './components/ImportExport/ImportExport';
-import dotenv from 'dotenv';
-
-const GA4_ID = process.env.REACT_APP_GA4_ID;
-
 
 const PageViewTracker = () => {
   const location = useLocation(); // Hook to get the current location (route)
   // console.log(location);
   useEffect(() => {
     // Initialize GA4 with your tracking ID (replace 'G-XXXXXXXXXX' with your actual GA4 ID)
-    ReactGA.initialize(GA4_ID); 
+    ReactGA.initialize(import.meta.env.VITE_GA4_ID); 
 
     ReactGA.send({
       hitType: 'pageview',

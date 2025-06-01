@@ -1,8 +1,9 @@
 import React from 'react'
+import './P.css'
 
 const P = () => {
   return (
-    <div>
+    <div className='privacy-policy'>
       <ul>
         <li>
             We use google log in to sign in user.

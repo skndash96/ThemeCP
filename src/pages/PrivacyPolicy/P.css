@@ -1,0 +1,8 @@
+.privacy-policy {
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+.privacy-policy li {
+  list-style-type: disc;
+}

@@ -62,7 +62,10 @@ const LoginPage = () => {
   return (
     <div>
     <div className='outer-container'>
-
+        <h1>
+            Login with Google
+        </h1>
+        
         <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
             <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
         </GoogleOAuthProvider>

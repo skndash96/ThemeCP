@@ -22,8 +22,15 @@ const PageViewTracker = () => {
   const location = useLocation(); // Hook to get the current location (route)
   // console.log(location);
   useEffect(() => {
+    const GA_MEASUREMENT_ID = import.meta.env.VITE_GA4_ID; // Ensure you have your GA4 ID in your environment variables
+
+    if (!GA_MEASUREMENT_ID) {
+      console.error('GA4 ID is not set. Please check your environment variables.');
+      return;
+    }
+
     // Initialize GA4 with your tracking ID (replace 'G-XXXXXXXXXX' with your actual GA4 ID)
-    ReactGA.initialize(import.meta.env.VITE_GA4_ID); 
+    ReactGA.initialize(GA_MEASUREMENT_ID); 
 
     ReactGA.send({
       hitType: 'pageview',

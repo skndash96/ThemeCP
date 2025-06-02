@@ -3,56 +3,7 @@ import './Level_Sheet.css'
 import { LevelContext } from '../../context/LevelContext'
 
 const Level_Sheet = () => {
-
-    // Dummy data for development/demo purposes
-    const level = [
-        {
-            level: 1,
-            time: 10,
-            Performance: 1150,
-            P1: 1100,
-            P2: 1200,
-            P3: 1180,
-            P4: 1170
-        },
-        {
-            level: 2,
-            time: 12,
-            Performance: 1350,
-            P1: 1300,
-            P2: 1380,
-            P3: 1370,
-            P4: 1340
-        },
-        {
-            level: 3,
-            time: 15,
-            Performance: 1550,
-            P1: 1500,
-            P2: 1580,
-            P3: 1570,
-            P4: 1540
-        },
-        {
-            level: 4,
-            time: 18,
-            Performance: 1750,
-            P1: 1700,
-            P2: 1780,
-            P3: 1770,
-            P4: 1740
-        },
-        {
-            level: 5,
-            time: 20,
-            Performance: 1950,
-            P1: 1900,
-            P2: 1980,
-            P3: 1970,
-            P4: 1940
-        }
-    ];
-    // const { level } = useContext(LevelContext);
+    const { level } = useContext(LevelContext);
 
     const getBackgroundColor = (data) => {
         const rating = parseInt(data);
@@ -96,6 +47,12 @@ const Level_Sheet = () => {
                 </thead>
 
                 <tbody>
+                    {level.length === 0 && (
+                        <tr>
+                            <td colSpan="7" style={{ textAlign: 'center' }}>No levels available</td>
+                        </tr>
+                    )}
+
                     {level.map((item, index) => (
                         <tr key={index}>
                             <td>{item.level}</td>

@@ -11,7 +11,7 @@ const Home = () => {
         <div className="typing-demo">
           Welcome to Theme<span className='make-red'>CP</span>...
         </div>
-        <div className='cta-buttons' style={{ display: 'flex' }}>
+        <div className='cta-buttons'>
           <button onClick={() => navigate('/guide')} className='get-started-button'>Get Started</button>
           <button onClick={() => window.open('https://discord.gg/ncnut8Zw63', '_blank')} className='discord-button'><img style={{ width: '32px', borderRadius: '40px', marginRight: '5px', border: 'none' }} src={discord}></img>Discord</button>
         </div>

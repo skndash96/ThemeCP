@@ -60,7 +60,6 @@ const LoginPage = () => {
     };
 
   return (
-    <div>
     <div className='outer-container'>
         <h1>
             Login with Google
@@ -69,7 +68,6 @@ const LoginPage = () => {
         <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
             <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
         </GoogleOAuthProvider>
-    </div>
     <center>
         <NavLink to="/privacy_policy"><br />By creating an account or signing you agree to our Terms and Conditions</NavLink>
         </center>

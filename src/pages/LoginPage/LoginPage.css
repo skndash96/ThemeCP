@@ -1,5 +1,6 @@
 .outer-container{
     width: 100%;
+    padding: 2rem;
     margin-top: 4rem;
     display: flex;
     flex-direction: column;
